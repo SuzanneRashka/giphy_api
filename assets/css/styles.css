@@ -1,0 +1,16 @@
+#gallery {
+    background-color: pink;
+    flex-direction: column;
+    display: flex;
+    float: left;
+}
+
+#search {
+    background-color: plum;
+    float: right;
+}
+
+#buttons {
+    background-color: powderblue;
+    float: right;
+}
