@@ -1,7 +1,7 @@
 #gallery {
     background-color: pink;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     float: left;
 }
 
@@ -13,4 +13,15 @@
 #buttons {
     background-color: powderblue;
     float: right;
+    clear: both;
+}
+
+#add-animal {
+    background-color: red;
+    float: right;
+}
+
+.button-display {
+    border-radius: 8px;
+    background-color: silver;
 }

@@ -13,33 +13,42 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
 
-    <div class="row">
-        <section id="gallery" class="flex-container col-8 col-sm-12">
-            <h2>Gallery</h2>
-        </section>
-
-        <section id="search" class="flex-container col-8 col-sm-12">
-            <h2>Search for something</h2>
-        </section>
-
-        <section id="buttons" class="flex-container col-8 col-sm-12">
-            <div>buttons of previous searched stuff
+            <!-- Search bar -->
+            <div id="search" class="flex-container">
+                <h2>Search for something</h2>
             </div>
-        </section>
 
+            <!-- Buttons  -->
+            <div id="buttons" class="flex-container">
+                <div id="buttons-display"></div>
+                <!-- Nothing in form displaying -->
+                <form id="animal-form">
+                    <label for="animal-input">Add an Animal</label>
+                    <input type="text" id="animal-input">
+                    <br>
+                    <!-- Button triggers new animal to be added -->
+                    <input id="add-animal" type="submit" value="Add an Animal">
+                </form>
+
+            </div>
+
+            <!-- Gallery -->
+            <div id="gallery" class="flex-container">
+                <h2>Gallery</h2>
+            </div>
+
+        </div>
     </div>
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script type="text/JavaScript" src="myscripts.js"></script>
+    <script type="text/JavaScript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
