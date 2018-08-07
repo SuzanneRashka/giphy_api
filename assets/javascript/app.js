@@ -1,6 +1,6 @@
 //javascript, jQuery
 
-var animals = ["goat", "cow", "horse", "sheep"];
+var animals = ["goat", "cow", "horse", "sheep", "sharp objects", "game of thrones", "bob\'s burgers"];
 var animal;
 
 function displayGiphy() {
@@ -15,13 +15,34 @@ function displayGiphy() {
     }).then(function (response) {
         // $("#gallery").text(JSON.stringify(response));
         console.log(response);
-        var imageUrl = response.data.image_original_url; /// still image
-        var imageTag = $("<img>");
-        imageTag.attr("src", imageUrl);
-        imageTag.attr("alt", response.data.title);
-        $("#gallery").prepend(imageTag);
+
+        response.data.forEach(function (gif) {
+
+            var imageTag = $("<img>");
+            imageTag.attr("src", gif.images.fixed_height_still.url);
+            imageTag.addClass("gif-container");
+            imageTag.attr('id', 'img-text')
+            imageTag.attr("alt", gif.title);
+            $("<p>").addClass("center");
+            $("#img-text").html(gif.rating);
+            $("#gallery").prepend(imageTag);
+
+        })
+
+        $('.gif-container').on('click', function () {
+            // if imgSrc has _still, then animate
+            // else change to still
+        });
+
     });
 }
+
+$('.gif-container').on('click', function () {
+    $(this).data()
+
+
+
+});
 
 function renderButtons() {
     // Deleting the movie buttons prior to adding new movie buttons

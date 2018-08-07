@@ -25,3 +25,7 @@
     border-radius: 8px;
     background-color: silver;
 }
+
+.gif-container {
+    justify-content: center;
+}
