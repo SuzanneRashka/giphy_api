@@ -31,9 +31,9 @@ function displayGiphy() {
   $.ajax({
     url: queryUrl,
     method: "GET"
-  }).then(function(response) {
+  }).then(function (response) {
     console.log(response);
-    response.data.forEach(function(gif) {
+    response.data.forEach(function (gif) {
       var imgStill = gif.images.fixed_height_still.url;
       var imgAnimate = gif.images.fixed_height.url;
       var divTag = $("<div>").addClass("img-card");
@@ -53,24 +53,25 @@ function displayGiphy() {
 
       $("#gallery").prepend(divTag);
 
-      $(".gif").on("click", function() {
-        // data.state, data.animate, data.state
-        console.log("clicking on gif");
-        var state = $(this).attr("data-state");
-        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-        // Then, set the image's data-state to animate
-        // Else set src to the data-still value
-        if (state === "still") {
-          $(this).attr("src", $(this).attr("data-animate"));
-          $(this).attr("data-state", "animate");
-        } else {
-          $(this).attr("src", $(this).attr("data-still"));
-          $(this).attr("data-state", "still");
-        }
-      });
     });
   });
-}
+};
+
+$("#gallery").on("click", ".gif", function () {
+  // data.state, data.animate, data.state
+  console.log("clicking on gif");
+  var state = $(this).attr("data-state");
+  // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+  // Then, set the image's data-state to animate
+  // Else set src to the data-still value
+  if (state === "still") {
+    $(this).attr("src", $(this).attr("data-animate"));
+    $(this).attr("data-state", "animate");
+  } else {
+    $(this).attr("src", $(this).attr("data-still"));
+    $(this).attr("data-state", "still");
+  }
+});
 
 function renderButtons() {
   // Deleting the movie buttons prior to adding new movie buttons
@@ -87,7 +88,7 @@ function renderButtons() {
   }
 }
 // adding user input into array
-$("#add-animal").on("click", function() {
+$("#add-animal").on("click", function () {
   event.preventDefault(); // will refresh page without
   animal = $("#animal-input")
     .val()
