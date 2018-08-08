@@ -26,7 +26,7 @@ function displayGiphy() {
   var queryUrl =
     "https://api.giphy.com/v1/gifs/search?q=+" +
     animal +
-    "&limit=1&api_key=BX0itqePi01jzKkvmct3rqC41VPzzLEk";
+    "&limit=10&api_key=BX0itqePi01jzKkvmct3rqC41VPzzLEk";
 
   $.ajax({
     url: queryUrl,
