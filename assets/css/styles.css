@@ -1,31 +1,57 @@
+html body {
+    margin: 0 20px;
+    /* height: 100%;
+    max-width: 1280px; */
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+31,28343b+100 */
+    background: #b5bdc8;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 31%, #28343b 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b5bdc8 0%, #828c95 31%, #28343b 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b5bdc8 0%, #828c95 31%, #28343b 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5bdc8', endColorstr='#28343b', GradientType=0);
+    /* IE6-9 */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin-top: 20px;
+    text-align: center
+}
+
 #gallery {
-    background-color: pink;
-    display: flex;
-    flex-direction: column;
-    float: left;
+    display: inline;
+    align-content: flex-start;
 }
 
 #search {
-    background-color: plum;
-    float: right;
+    display: block;
+    float: left;
 }
 
 #buttons {
-    background-color: powderblue;
-    float: right;
-    clear: both;
+    display: block;
+    /* clear: both; */
 }
 
-#add-animal {
-    background-color: red;
-    float: right;
-}
-
-.button-display {
-    border-radius: 8px;
-    background-color: silver;
-}
-
-.gif-container {
+.header {
+    display: block;
     justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.buttons .btn {
+    margin: 5px;
+}
+
+.img-card {
+    display: inline-block;
+    /* margin: 0 auto; */
+    padding: 10px;
 }
