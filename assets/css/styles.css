@@ -1,8 +1,23 @@
-html body {
-    margin: 0 20px;
-    /* height: 100%;
-    max-width: 1280px; */
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b5bdc8+0,828c95+31,28343b+100 */
+h2 {
+    color: white;
+}
+
+html {
+    height: 100%;
+    margin: 20px;
+    background-color: teal;
+}
+
+/* #2B363D */
+
+/* #gallery {
+    display: inline;
+    align-content: flex-start;
+} */
+
+.jumbotron {
+    padding: 10px 20px;
+    height: 100%;
     background: #b5bdc8;
     /* Old browsers */
     background: -moz-linear-gradient(top, #b5bdc8 0%, #828c95 31%, #28343b 100%);
@@ -15,39 +30,8 @@ html body {
     /* IE6-9 */
 }
 
-html {
-    height: 100%;
-}
-
-body {
-    margin-top: 20px;
-    text-align: center
-}
-
-#gallery {
-    display: inline;
-    align-content: flex-start;
-}
-
-#search {
-    display: block;
-    float: left;
-}
-
-#buttons {
-    display: block;
-    /* clear: both; */
-}
-
-.header {
-    display: block;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-.buttons .btn {
-    margin: 5px;
+.rating {
+    color: white;
 }
 
 .img-card {
