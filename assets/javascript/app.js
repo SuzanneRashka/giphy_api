@@ -23,10 +23,7 @@ var animal;
 function displayGiphy() {
   animal = $(this).attr("data-name");
 
-  var queryUrl =
-    "https://api.giphy.com/v1/gifs/search?q=+" +
-    animal +
-    "&limit=10&api_key=BX0itqePi01jzKkvmct3rqC41VPzzLEk";
+  var queryUrl = "https://api.giphy.com/v1/gifs/search?q=+" + animal + "&limit=10&api_key=BX0itqePi01jzKkvmct3rqC41VPzzLEk";
 
   $.ajax({
     url: queryUrl,
@@ -39,6 +36,7 @@ function displayGiphy() {
       var divTag = $("<div>").addClass("img-card");
       var imageTag = $("<img>");
 
+      imageTag.attr("src", imgStill);
       imageTag.attr("data-still", imgStill);
       imageTag.attr("data-animate", imgAnimate);
       imageTag.attr("data-state", "still");
